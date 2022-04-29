@@ -1,0 +1,164 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+body{
+    display: grid;
+    grid-template-columns: 20% 80%;    
+    grid-template-rows: repeat(4,170px);
+    height: 150vh;
+    background-color: gainsboro;
+    font-family: sans-serif;
+
+}
+.section{
+padding:1em;
+}
+nav{
+    background-color: rgb(29, 151, 199);
+    width: 20%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+nav div{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: 2rem;
+
+}
+nav div a,nav h1{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(245, 245, 245, 0.932);
+    margin-left: 2rem;
+}
+
+/*filter area css*/
+.filter-container{
+    grid-column: 2 / -1;
+    background-color: white;
+    box-shadow: 5px 1px 7px rgb(150, 149, 149);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+[data-search]{
+    width: 35em;
+    font-size: 17px;
+    padding: 3px 3px 3px 10px;
+    margin-top: 5px;
+    background-color: rgba(128, 128, 128, 0.185);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+
+}
+.filter-section1,.filter-section2{
+    display: flex;
+    justify-content: space-around;
+}
+.head2,.head1{
+    display: flex;
+    gap:1em;
+    align-items: center;
+
+}
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(184, 183, 183);
+    border-radius: 50px;
+    background-image:url("./img/saitama.jfif");
+    background-position: center;
+    background-size: cover;
+
+}
+.subhead1,.subhead2{
+    display: flex;
+    gap:1em;
+    align-items: center;
+}
+.subhead2 a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 255, 0.781);
+    color: white;
+    padding: .5em;
+    border-radius: 50px;
+    width: 5em;
+    text-align: center;
+}
+
+
+    
+/*content area */
+.contents-container{
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5em;
+}
+.projects{
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25px;
+    gap: 1.5em;
+}
+.projects h1 ,.anouncements h1, .trends h1{
+    grid-column: 1 / -1;
+    font-size: 18px;
+}
+.projects article{
+    background-color: whitesmoke;
+    border-left: rgb(231, 173, 27) solid 4px;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgb(179, 179, 179);
+}
+
+/* anouncements css */
+.anouncements , .trends{
+    display: grid;
+    grid-template-rows: 25px;
+    gap: 1.5em;
+}
+
+.anounce-contents {
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgb(179, 179, 179);
+}
+.anounce-contents article{
+    padding:3px;
+    border-bottom: 1px black solid;
+}
+
+.anounce-contents article p {
+    font-size: 13px;
+}
+
+/* trending css */
+
+.trends .accounts{
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgb(179, 179, 179);
+
+}
+.accounts > div{
+    display: flex;
+    gap:1em;
+    padding: 5px;
+    font-size: 13px;
+}
+.accounts .profile-pic{
+height: 40px;    
+width: 55px;
+}
